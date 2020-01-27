@@ -5,6 +5,10 @@ import InputBar from './components/InputBar';
 import TodoDetail from './components/TodoDetail';
 import TodoItem from './components/TodoItem';
 
+/*
+App class based on Tyler Pott's tutorial How To Code Your First Mobile App 
+in React Native (https://www.youtube.com/watch?v=NuZOwsmzcro)
+*/
 export default class App extends React.Component {
   constructor () {
     super();
@@ -38,21 +42,24 @@ export default class App extends React.Component {
     });
   }
   
+  // Adapted from  https://www.linkedin.com/learning/react-native-essential-training/welcome?u=2167153
+  // This method takes an ID and sets the currentTodoId in state to this new ID
   setCurrentTodo = (itemId) => {
-    console.log('set item:' + itemId);
-    
     this.setState({
-     
       currentTodoId: itemId,
     });
   }
 
+  // Adapted from  https://www.linkedin.com/learning/react-native-essential-training/welcome?u=2167153
+  // This method sets the currentTodoId in state to null
   unsetCurrentTodo = () => {
     this.setState({
       currentTodoId: null,
     });
   }
 
+  // Adapted from  https://www.linkedin.com/learning/react-native-essential-training/welcome?u=2167153
+  // This method finds the current todo based on the currentTodoId in state
   currentTodo = () => {
     return this.state.todos.find(
       (todo) => todo.id === this.state.currentTodoId
@@ -141,7 +148,7 @@ export default class App extends React.Component {
                 return (
                   <TodoItem todoItem={item} 
                   toggleDone={() => this.toggleDone(item)} 
-                  onPress={ this.setCurrentTodo}
+                  onPress={ this.setCurrentTodo }
                   removeTodo={() => this.removeTodo(item)}
                   />
                 )
@@ -150,7 +157,6 @@ export default class App extends React.Component {
           </View>
         );
       }
-
 }
 }
 const styles = StyleSheet.create({

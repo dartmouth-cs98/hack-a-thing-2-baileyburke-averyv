@@ -1,6 +1,10 @@
 import React from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
 
+/*
+InputBar based on Tyler Pott's tutorial How To Code Your First Mobile App 
+in React Native (https://www.youtube.com/watch?v=NuZOwsmzcro)
+*/
 const InputBar = (props) => {
     return (
         <View style={styles.inputContainer}>

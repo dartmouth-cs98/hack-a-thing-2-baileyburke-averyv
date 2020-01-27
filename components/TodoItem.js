@@ -2,13 +2,21 @@ import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View} from  'react-native';
 import { Icon, Button } from 'react-native-elements';
 
+/*
+TodoItem class based on Tyler Pott's tutorial How To Code Your First Mobile App 
+in React Native (https://www.youtube.com/watch?v=NuZOwsmzcro)
+*/
 export default class TodoItem extends React.Component {
     constructor (props) {
         super(props);
     }
+    
+    // Adapted from  https://www.linkedin.com/learning/react-native-essential-training/welcome?u=2167153
+    // This method calls setCurrentTodo (passed in as a prop) with the selected todo item
     handlePress = () => {
         this.props.onPress(this.props.todoItem.id);
     }
+    
     render() {
         const todoItem = this.props.todoItem;
         return (

@@ -3,6 +3,10 @@ import { StyleSheet, Text, TouchableOpacity, View, Picker} from  'react-native';
 import ModalDropdown from 'react-native-modal-dropdown';
 import DatePicker from 'react-native-datepicker';
 
+/*
+TodoDetail class based on the Linkedin Learning class, React Native Essential 
+Training (https://www.linkedin.com/learning/react-native-essential-training/welcome?u=2167153)
+*/
 export default class TodoDetail extends React.Component {
     constructor (props) {
         super(props);
